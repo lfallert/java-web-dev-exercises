@@ -15,6 +15,7 @@ public class Alice {
             } else {
                 System.out.println("No, " + searchTerm + " is not present.");
             }
+            input.close();
         }
     }
 }
