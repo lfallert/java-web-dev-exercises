@@ -12,5 +12,5 @@ public class Area {
         input.close();
     }
 
-        
+
 }
