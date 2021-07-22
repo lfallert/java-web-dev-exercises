@@ -16,7 +16,7 @@ public class ArrayListPractice {
         Scanner input = new Scanner(System.in);
 
         ArrayList<String> wordArray = new ArrayList<>(Arrays.asList("cat", "zebra", "dog", "snake", "bear"));
-        
+
 
         System.out.println(FiveLetters.hasFiveLetters(wordArray));
 
