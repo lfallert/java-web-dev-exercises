@@ -22,21 +22,19 @@ public class Student {
         this(name, studentId, 0, 0);
     }
 
-    public void setName(String aName) {
-        name = aName;
+    public void setName(String name) {
+        name = this.name;
     }
 
-    public void setStudentId(int aStudentId) {
-        studentId = aStudentId;
+    public void setStudentId(int studentId) {
+        studentId = this.studentId;
     }
 
-    public void setNumberOfCredits(int aNumberOfCredits) {
-        numberOfCredits = aNumberOfCredits;
+    public void setNumberOfCredits(int numberOfCredits) {
+        numberOfCredits = this.numberOfCredits;
     }
 
-    public void setGpa(double aGpa) {
-        gpa = aGpa;
-    }
+    public void setGpa(double gpa) { this.gpa = gpa; }
 
     public String getName() {
         return name;
@@ -50,8 +48,6 @@ public class Student {
         return numberOfCredits;
     }
 
-    public double getGpa () {
-        return gpa;
-    }
+    public double getGpa() { return gpa; }
 
 }
