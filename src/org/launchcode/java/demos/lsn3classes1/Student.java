@@ -5,11 +5,13 @@ package org.launchcode.java.demos.lsn3classes1;
 
 public class Student {
 
+    //fields
     private String name;
     private int studentId;
     private int numberOfCredits = 0;
     private double gpa = 0.0;
 
+    //constructor
     public Student(String name, int studentId,
                    int numberOfCredits, double gpa) {
         this.name = name;
@@ -18,10 +20,12 @@ public class Student {
         this.gpa = gpa;
     }
 
+    //constructor that sets default values if not specified, i think
     public Student(String name, int studentId) {
         this(name, studentId, 0, 0);
     }
 
+    //setters and getters
     public void setName(String name) {
         name = this.name;
     }

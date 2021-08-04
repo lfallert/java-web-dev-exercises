@@ -1,25 +1,26 @@
 package org.launchcode.java.studios.restaurant;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Menu {
 
     //fields
-    private MenuItem menuItem;
+    private ArrayList<MenuItem> menuItems = new ArrayList<>();
+    private LocalDate lastUpdated;
 
     //constructor
-    public Menu(Object menuItem) {
-        this.menuItem = (MenuItem) menuItem;
-    }
+//    public Menu(Object menuItem) {
+//        this.menuItem = (MenuItem) menuItem;
+//    }
 
     //getter and setter
-    public MenuItem getMenuItem() { return menuItem; }
-    public void setMenuItem(MenuItem menuItem) { this.menuItem = menuItem; }
+    public ArrayList<MenuItem> getMenuItem() { return menuItems; }
 
-    //methods
-    public void lastUpdated() {
-        Date lastUpdated = MenuItem.getDate();
-        System.out.println("This menu was last updated on " + lastUpdated);
-    }
+//    //methods
+//    public void lastUpdated() {
+//        Date lastUpdated = MenuItem.getDate();
+//        System.out.println("This menu was last updated on " + lastUpdated);
+//    }
 
 }
