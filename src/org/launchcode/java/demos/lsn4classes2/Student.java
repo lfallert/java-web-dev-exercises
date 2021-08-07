@@ -62,8 +62,26 @@ public class Student {
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Student objects equal.
     public boolean equals(Object toBeCompared) {
-        Student theStudent = (Student) toBeCompared;
-        return theStudent.getStudentId() == getStudentId();
+        //checks if object is the same as the other object
+        if(this == toBeCompared){
+            return true;
+        }
+        // checks if second object is empty or missing values?
+        if(toBeCompared == null){
+            return false;
+        }
+        // checks if the objects are of the small class
+        if(this.getClass() != toBeCompared.getClass()) {
+            return false;
+        }
+        // cast the object toBeCompared to the student class so we can access toBeCompared as a student object
+        Student newStudent = (Student) toBeCompared;
+        if(this.studentId == newStudent.getStudentId()) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     public String getName() {
