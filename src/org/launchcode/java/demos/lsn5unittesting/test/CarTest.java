@@ -30,6 +30,10 @@ public class CarTest {
     }
     //TODO: constructor sets gasTankLevel
 
+    @Test
+    public void testGasTankLevel() {
+        assertEquals(10, test_car.getGasTankLevel(), .001);
+    }
 
 
     //TODO: gasTankLevel is accurate after driving within tank range
@@ -52,6 +56,11 @@ public class CarTest {
     public void testGasOverfillException() {
         test_car.addGas(5);
         fail("Shouldn't get here, car cannot have more gas in tank than the size of the tank");
+    }
+
+    @Test public void testOdometerWorks() {
+        test_car.drive(50);
+        assertTrue(test_car.getOdometer() > 0);
     }
 
 

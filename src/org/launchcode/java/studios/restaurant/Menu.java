@@ -5,9 +5,12 @@ import java.util.ArrayList;
 
 public class Menu {
 
+
     //fields
     private static ArrayList<MenuItem> menuItems = new ArrayList<>();
+    private static LocalDate dateCreated;
     private LocalDate lastUpdated;
+
 
     //getter and setter
     public static ArrayList<MenuItem> getMenuItem() { return menuItems; }
@@ -31,17 +34,20 @@ public class Menu {
 
     public static void addMenuItem(MenuItem itemToBeAdded) {
         menuItems.add(itemToBeAdded);
+        dateCreated = LocalDate.now();
     }
 
     public static void removeMenuItem(MenuItem itemToBeRemoved) {
         menuItems.remove(itemToBeRemoved);
     }
 
-//    public static MenuItem lastUpdated(MenuItem itemToBeDated) {
-//        return itemToBeDated.dateCreated;
-//    }
-
-
+    public String toString() {
+        String returnString = "";
+        for(MenuItem menuItem: this.menuItems){
+            returnString = returnString + menuItem + "\n";
+        }
+        return returnString;
+    }
 
 }
 

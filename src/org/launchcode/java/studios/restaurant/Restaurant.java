@@ -6,6 +6,7 @@ public class Restaurant {
 
     public static void main(String[] args) {
 
+        Menu theMenu = new Menu();
         MenuItem taco = new MenuItem("taco", 4.50, "a taco", "main course", true);
         MenuItem nachos = new MenuItem("nachos", 6.50, "a plate of nachos", "appetizer", false);
 

@@ -16,7 +16,7 @@ public class MenuItem {
     private String category;
     private boolean isNew;
 
-    //protected int dateCreated = new LocalDate.now();
+
 
     //constructor
     public MenuItem(String name, double price, String description, String category, boolean isNew) {
@@ -44,12 +44,7 @@ public class MenuItem {
     public boolean getIsNew() { return isNew; }
     public void setNew(boolean isNew) { this.isNew = isNew; }
 
-//    public int getDateCreated() {
-//        return dateCreated;
-//    }
-//    public void setDateCreated(int dateCreated) {
-//        this.dateCreated = dateCreated;
-//    }
+
 
     //ToString method
     public String toString() {
@@ -60,9 +55,10 @@ public class MenuItem {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        if(o == null) return false;
         if (!(o instanceof MenuItem)) return false;
         MenuItem menuItem = (MenuItem) o;
-        return Double.compare(menuItem.price, price) == 0 && isNew == menuItem.isNew && Objects.equals(name, menuItem.name) && Objects.equals(description, menuItem.description) && Objects.equals(category, menuItem.category);
+        return this.name.equals(((MenuItem) o).getName());
     }
 
     @Override
