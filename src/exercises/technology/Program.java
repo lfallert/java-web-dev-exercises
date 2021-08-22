@@ -11,7 +11,9 @@ public class Program {
 
         String myId = AbstractEntity.setIdNumber();
 
-        System.out.println(myId);
+        myPhone.setIdNumber();
+
+        System.out.println(myPhone);
 
 
 

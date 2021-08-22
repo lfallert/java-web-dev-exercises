@@ -53,9 +53,33 @@ public class Computer extends AbstractEntity {
     public String printBrand() {
         return "This device is a " + brand;
     }
+
     public String printYear() {
         return "This device came out in " + year;
     }
 
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "year=" + year +
+                ", brand='" + brand + '\'' +
+                ", id='" + idNumber + '\'' +
+                '}';
 
+    }
+
+
+//    public String setIdNumber() {
+//        idNumber = "";
+//        while (idNumber == "") {
+//            idNumber = UUID.randomUUID().toString();
+//
+//            if (!idNumbers.contains(idNumber)) {
+//                idNumbers.add(idNumber);
+//                break;
+//            } else
+//                idNumber = "";
+//        }
+//        return idNumber;
+//    }
 }

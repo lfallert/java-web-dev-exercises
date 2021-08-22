@@ -12,8 +12,8 @@ import static org.junit.Assert.*;
 
 public class ComputerTest {
 
-    Computer test_laptop;
-    Computer test_smartphone;
+    Laptop test_laptop;
+    SmartPhone test_smartphone;
 
     @Before
     public void createLaptopObject() {
@@ -45,8 +45,7 @@ public class ComputerTest {
     // ask why it doesn't work to make a new computer object with laptop class
     @Test
     public void testAddRamMethod() {
-        Laptop myLaptop = new Laptop (2016, "Dell", "steel grey", 16);
-        assertEquals(20, myLaptop.addRam(4), .001);
+        assertEquals(20, test_laptop.addRam(4), .001);
     }
 
     @Test
